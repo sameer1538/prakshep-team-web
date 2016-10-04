@@ -1,0 +1,310 @@
+<dom-module id="pa-menu">
+  <template>
+    <style include="shared-styles"></style>
+    <style>
+				  iron-icon {
+					margin-right: 33px;
+					opacity: 0.54;
+				  }
+
+				  .iron-selected {
+					color: var(--default-primary-color);
+				  }
+
+				  a {
+					text-decoration: none;
+					color: var(--menu-link-color);
+					display: -ms-flexbox;
+					display: -webkit-flex;
+					display: flex;
+					-ms-flex-direction: row;
+					-webkit-flex-direction: row;
+					flex-direction: row;
+					-ms-flex-align: center;
+					-webkit-align-items: center;
+					align-items: center;
+					font-family: 'Roboto', 'Noto', sans-serif;
+					-webkit-font-smoothing: antialiased;
+					text-rendering: optimizeLegibility;
+					font-size: 14px;
+					font-weight: 400;
+					line-height: 24px;
+					min-height: 48px;
+					padding: 0 16px;
+					width: 255px;
+					white-space: nowrap;
+					box-sizing: border-box;
+				  }
+
+				  a[hide] {
+					display: none;
+				  }
+
+				  paper-submenu paper-item {
+					font-size: 14px;
+					cursor: pointer;
+					outline: none;
+					white-space: nowrap;
+					width: 255px;
+					box-sizing: border-box;
+					@apply(--layout);
+					@apply(--layout-horizontal);
+				  }
+
+				  .arow-down {
+					margin-right: 0;
+				  }
+
+				  paper-submenu paper-menu {
+					background: var(--drawer-submenu-background);
+					padding: 0;
+					height: 0;
+					max-height: 0;
+					overflow: hidden;
+					transition: max-height 0.3s ease-in-out;
+				  }
+
+				  paper-submenu .submenu-expanded + paper-menu {
+					height: auto;
+					max-height: 300px;
+				  }
+				  
+    </style>
+						<div id="chatTabs">
+
+							
+									<paper-tabs selected="0" noink="" role="tablist" tabindex="0" class="x-scope paper-tabs-0">
+										<paper-icon-button icon="paper-tabs:chevron-left" class="hidden style-scope paper-tabs x-scope paper-icon-button-0" role="button" tabindex="0" aria-disabled="false">
+											<paper-ripple id="ink" class="circle style-scope paper-icon-button" center="">
+											<div id="background" class="style-scope paper-ripple"></div>
+											<div id="waves" class="style-scope paper-ripple"></div>
+											</paper-ripple>
+											<iron-icon id="icon" class="style-scope paper-icon-button x-scope iron-icon-0"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" class="style-scope iron-icon"></path></g></svg>
+												<iron-meta id="meta" type="iconset" class="style-scope iron-icon"></iron-meta>
+											</iron-icon>
+										</paper-icon-button>
+										<div id="tabsContainer" class="flex style-scope paper-tabs">
+										<div id="tabsContent" class="horizontal layout style-scope paper-tabs">
+										
+										<paper-tab class="x-scope paper-tab-0" role="button" aria-disabled="false" tabindex="-1">
+
+											<div  onclick="document.getElementById('chatAI').style.display='block';document.getElementById('chatExpert').style.display='none';document.getElementById('chatGrp').style.display='none';" class="tab-content flex-auto center-center horizontal layout style-scope paper-tab">
+											  Crops
+											</div>
+
+											<span style="display: none;">
+											  </span><paper-ripple id="ink" initial-opacity="0.95" opacity-decay-velocity="0.98" class="style-scope paper-tab" style="display: none;" animating="">
+											<div id="background" class="style-scope paper-ripple" style="opacity: 0; background-color: rgb(255, 255, 255);"></div>
+											<div id="waves" class="style-scope paper-ripple"><div class="wave-container style-scope paper-ripple" style="top: 0px; left: 0px; width: 0px; height: 0px; transform: translate3d(183px, 565px, 0px);"><div class="wave style-scope paper-ripple" style="background-color: rgb(255, 255, 255); opacity: 0;"></div></div><div class="wave-container style-scope paper-ripple" style="top: 0px; left: 0px; width: 0px; height: 0px; transform: translate3d(189px, 581px, 0px);"><div class="wave style-scope paper-ripple" style="background-color: rgb(255, 255, 255); opacity: 0;"></div></div><div class="wave-container style-scope paper-ripple" style="top: 0px; left: 0px; width: 0px; height: 0px; transform: translate3d(363px, 112px, 0px);"><div class="wave style-scope paper-ripple" style="background-color: rgb(255, 255, 255); opacity: 0;"></div></div></div>
+										  </paper-ripple><span style="display: none;">
+											</span><template is="dom-if" class="style-scope paper-tab"></template>
+
+										</paper-tab>
+										
+										<paper-tab class="x-scope paper-tab-0" role="button" aria-disabled="false" tabindex="-1">
+
+											<div onclick="document.getElementById('chatExpert').style.display='block';document.getElementById('chatAI').style.display='none';document.getElementById('chatGrp').style.display='none';" class="tab-content flex-auto center-center horizontal layout style-scope paper-tab">
+											  Chick-pea
+											</div>
+
+											<span style="display: none;">
+											  </span><paper-ripple id="ink" initial-opacity="0.95" opacity-decay-velocity="0.98" class="style-scope paper-tab" style="display: none;" animating="">
+											<div id="background" class="style-scope paper-ripple" style="opacity: 0; background-color: rgb(255, 255, 255);"></div>
+											<div id="waves" class="style-scope paper-ripple"><div class="wave-container style-scope paper-ripple" style="top: 0px; left: 0px; width: 0px; height: 0px; transform: translate3d(183px, 565px, 0px);"><div class="wave style-scope paper-ripple" style="background-color: rgb(255, 255, 255); opacity: 0;"></div></div><div class="wave-container style-scope paper-ripple" style="top: 0px; left: 0px; width: 0px; height: 0px; transform: translate3d(189px, 581px, 0px);"><div class="wave style-scope paper-ripple" style="background-color: rgb(255, 255, 255); opacity: 0;"></div></div><div class="wave-container style-scope paper-ripple" style="top: 0px; left: 0px; width: 0px; height: 0px; transform: translate3d(363px, 112px, 0px);"><div class="wave style-scope paper-ripple" style="background-color: rgb(255, 255, 255); opacity: 0;"></div></div></div>
+										  </paper-ripple><span style="display: none;">
+											</span><template is="dom-if" class="style-scope paper-tab"></template>
+
+										</paper-tab>
+										
+										<paper-tab class="x-scope paper-tab-0" role="button" aria-disabled="false" tabindex="-1">
+
+											<div onclick="document.getElementById('chatGrp').style.display='block';document.getElementById('chatAI').style.display='none';document.getElementById('chatExpert').style.display='none';"class="tab-content flex-auto center-center horizontal layout style-scope paper-tab">
+											  wheat
+											</div>
+
+											<span style="display: none;">
+											  </span><paper-ripple id="ink" initial-opacity="0.95" opacity-decay-velocity="0.98" class="style-scope paper-tab" style="display: none;" animating="">
+											<div id="background" class="style-scope paper-ripple" style="opacity: 0; background-color: rgb(255, 255, 255);"></div>
+											<div id="waves" class="style-scope paper-ripple"><div class="wave-container style-scope paper-ripple" style="top: 0px; left: 0px; width: 0px; height: 0px; transform: translate3d(183px, 565px, 0px);"><div class="wave style-scope paper-ripple" style="background-color: rgb(255, 255, 255); opacity: 0;"></div></div><div class="wave-container style-scope paper-ripple" style="top: 0px; left: 0px; width: 0px; height: 0px; transform: translate3d(189px, 581px, 0px);"><div class="wave style-scope paper-ripple" style="background-color: rgb(255, 255, 255); opacity: 0;"></div></div><div class="wave-container style-scope paper-ripple" style="top: 0px; left: 0px; width: 0px; height: 0px; transform: translate3d(363px, 112px, 0px);"><div class="wave style-scope paper-ripple" style="background-color: rgb(255, 255, 255); opacity: 0;"></div></div></div>
+										  </paper-ripple><span style="display: none;">
+											</span><template is="dom-if" class="style-scope paper-tab"></template>
+
+										</paper-tab>
+										
+										<div id="selectionBar" class="undefinedstyle-scope paper-tabs" style="transform: translate3d(33.3364%, 0px, 0px) scaleX(0.333364);"></div>
+
+									  </div>
+
+									</div>
+
+									<paper-icon-button icon="paper-tabs:chevron-right" class="hidden style-scope paper-tabs x-scope paper-icon-button-0" role="button" tabindex="0" aria-disabled="false">
+									<paper-ripple id="ink" class="circle style-scope paper-icon-button" center="">
+									<div id="background" class="style-scope paper-ripple"></div>
+									<div id="waves" class="style-scope paper-ripple"></div>
+								  </paper-ripple>
+									<iron-icon id="icon" class="style-scope paper-icon-button x-scope iron-icon-0"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" class="style-scope iron-icon"></path></g></svg>
+									<iron-meta id="meta" type="iconset" class="style-scope iron-icon"></iron-meta>
+								  </iron-icon>
+								  </paper-icon-button>
+
+								  </paper-tabs>	
+								  <style>
+									paper-tabs {
+									  height: 48px;
+										width:10%;
+										color:orange;
+										  font-size: 25px;
+										  font-weight: 500;
+										  overflow: hidden;
+										  -webkit-user-select: none;
+										  -moz-user-select: none;
+										  -ms-user-select: none;
+										  user-select: none;
+										  -webkit-tap-highlight-color: rgba(0,0,0,0);
+									}
+
+									#tabsContainer.paper-tabs {
+									  position: relative;
+										  height: 100%;
+										  white-space: nowrap;
+										  overflow: hidden;
+									}
+
+									#tabsContent.paper-tabs {
+									  height: 100%;
+									}
+
+									#tabsContent.scrollable.paper-tabs {
+									  position: absolute;
+										  white-space: nowrap;
+									}
+
+									.hidden.paper-tabs {
+									  display: none;
+									}
+
+									.not-visible.paper-tabs {
+									  opacity: 0;
+									}
+
+									paper-icon-button.paper-tabs {
+									  width: 46px;
+										  padding: 20px;
+									}
+
+									#selectionBar.paper-tabs {
+									  position: absolute;
+										  height: 2px;
+										  bottom: 0;
+										  text-align:center;
+										  left: 0;
+										  right: 0;
+										  -webkit-transform-origin: left center;
+										  transform-origin: left center;
+										  -webkit-transform: scale(0);
+										  transform: scale(0);
+										  transition: -webkit-transform;
+										  transition: transform;
+									}
+
+									#selectionBar.align-bottom.paper-tabs {
+									  top: 0;
+										  bottom: auto;
+									}
+
+									#selectionBar.expand.paper-tabs {
+									  transition-duration: 0.15s;
+										  transition-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
+									}
+
+									#selectionBar.contract.paper-tabs {
+									  transition-duration: 0.18s;
+										  transition-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+									}
+
+									#tabsContent.paper-tabs  > *:not(#selectionBar) {
+									  height: 100%;
+									}
+																	  
+										paper-tab {
+											  position: relative;
+												  padding: 10px 30px 10px;
+												  overflow: hidden;
+												  cursor: pointer;
+											}
+
+											paper-tab:focus {
+											  outline: none;
+											}
+
+											paper-tab[link] {
+											  padding: 0;
+											}
+
+											.tab-content.paper-tab {
+											  height: 100%;
+												  -webkit-transform: translateZ(0);
+												  transform: translateZ(0);
+												  transition: opacity 0.1s cubic-bezier(0.4, 0.0, 1, 1);
+											}
+
+											paper-tab:not(.iron-selected) > .tab-content.paper-tab {
+											  opacity: 0.8;
+											}
+
+											paper-tab:focus .tab-content.paper-tab {
+											  opacity: 1;
+												  font-weight: 700;
+											}
+
+											#ink.paper-tab {
+											  pointer-events: none;
+											}
+
+											.tab-content.paper-tab  > a {
+											  height: 100%;
+												  
+												  -ms-flex: 1 1 0.000000001px;
+												  -webkit-flex: 1;
+												  flex: 1;
+												  -webkit-flex-basis: 0.000000001px;
+												  flex-basis: 0.000000001px;
+											}							  
+																										  
+																	  
+								  </style>
+					
+					</div>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'pa-menu',
+
+        toggleSubmenu: function(e) {
+          e.target.parentNode.classList.toggle('submenu-expanded');
+        },
+
+        onDataRouteClick: function() {
+          // Close drawer after menu item is selected if drawerPanel is narrow
+          var drawerPanel = document.querySelector('#paperDrawerPanel');
+          if (drawerPanel.narrow) {
+            drawerPanel.closeDrawer();
+          }
+
+          // adjust charts to widgets size
+          var charts = document.getElementsByTagName('google-chart');
+          setTimeout(function(){
+            for (var i = 0; i < charts.length; i++) {
+              charts[i].drawChart();
+            }
+          }, 0);
+        }
+      });
+    })();
+  </script>
+
+</dom-module>

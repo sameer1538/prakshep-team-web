@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Use correct character set. -->
+  <meta charset="utf-8">
+  <!-- Tell IE to use the latest, best version. -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>मानचित्र  > Prakshep</title>
+  <script src="../Assets/Lib/CesiumUnminified/Cesium.js"></script>
+  	<script src="https://cdn.smooch.io/smooch.min.js"></script>
+
+  <style>
+      @import url(../Assets/Lib/CesiumUnminified/Widgets/widgets.css);
+      html, body, #cesiumContainer {
+          width: 100%; height: 100%; margin: 0; overflow: hidden;
+      }
+  </style>
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <div id="cesiumContainer"></div>
+  <script src="Assets/Apps/App.js"></script>
+  <script>
+Smooch.init({ appToken: '1ui8iitrl7g5sik8jl1hz5m9t' });
+</script>
+</body>
+</html>
